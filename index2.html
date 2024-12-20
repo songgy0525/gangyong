@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 10px 0; /* 간격 축소 */
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            text-align: center;
+            padding: 10px; /* 패딩 줄임 */
+        }
+
+        th {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+
+        td img {
+            max-width: 50px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: 1px solid #000000;
+            cursor: pointer;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .back-button:hover {
+            background-color: #dcdcdc;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Go Back</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="quse.jpg.png" alt="Image 3"></td>
+                <td><a href="my name.html">What my name</a></td>
+                <td>2001-</td>
+                <td>My name is . . .</td> 
+            </tr>
+            <tr>
+                <td><img src="junior.jpg" width="100px" height="100px" alt="Sample Image 1"></td>
+                <td><a href="Birth.html">Birth</a></td>
+                <td>2001</td>
+                <td>The date I was born</td>
+            </tr>
+            <tr>
+                <td><img src="emoji.png.webp" alt="Image 13"></td>
+                <td><a href="index3.html">University</a></td>
+                <td>2020-</td>
+                <td>What University</td>
+            </tr>
+            <tr>
+                <td><img src="sung.png" alt="Image 11"></td>
+                <td><a href="info.html">info</a></td>
+                <td>?</td>
+                <td>What did I do?</td>
+            </tr>
+            <tr>
+                <td><img src="cam.png" alt="Image 6"></td>
+                <td><a href="PhoA.html">Photographic Art</a></td>
+                <td>2020-2023</td>
+                <td>Kaywon Photographic Art..</td>
+            </tr>
+           
+            <tr>
+                <td><img src="./융/융.png" alt="Image 13"></td>
+                <td><a href="Intermedia Art.html">Intermedia Art</a></td>
+                <td>2023-2024</td>
+                <td>Kaywon Intermedia Art..</td>
+            </tr>
+            <tr>
+                <td><img src="./poster icon/poster icon.png" alt="Image 14"></td>
+                <td><a href="poster.html">Poster</a></td>
+                <td>2023-</td>
+                <td>Exhibitions I participated in</td>
+            </tr>
+            <tr>
+                <td><img src="jeju.png" alt="Image 4"></td>
+                <td><a href="jeju.html">JEJU island!</a></td>
+                <td>2020-2024</td>
+                <td>JEJU island!</td>
+            </tr>
+            <tr>
+                <td><img src="moto.png" alt="Image 5"></td>
+                <td><a href="motor.html">Motorcycle</a></td>
+                <td>2023-</td>
+                <td>Honda, Yamaha, Suzuki</td>
+            </tr>
+            <tr>
+                <td><img src="dog.png" alt="Image 7"></td>
+                <td><a href="chunsik.html">Chunsik</a></td>
+                <td>2019-</td>
+                <td>Dog</td>
+            </tr>
+            <tr>
+                <td><img src="Yuki 2.jpeg" alt="Image 8"></td>
+                <td><a href="Yuki.html">My friend Yuki</a></td>
+                <td>2004-2008</td>
+                <td>Remembering Yuki</td>
+            </tr>
+            <tr>
+                <td><img src="./ultra 400/Kodak-400.webp" alt="Image 9"></td>
+                <td><a href="film.html">FILM</a></td>
+                <td>2020-</td>
+                <td>I often use the Kodak ultramax 400.</td>
+            </tr>
+            <tr>
+                <td><img src="./high p/moon.png" alt="Image 10"></td>
+                <td><a href="highs.html">Highschool student</a></td>
+                <td>2017-2019</td>
+                <td>This student will be...</td>
+            </tr>
+            <tr>
+                <td><img src="./polar/pngegg.png" alt="Image 12"></td>
+                <td><a href="polar.html">Polaroid</a></td>
+                <td>2008</td>
+                <td>Are you guys doing well?</td>
+            </tr>
+            <tr>
+                <td><img src="./installation/ashiba.png" alt="Image 15"></td>
+                <td><a href="installation.html">Ashiba play</a></td>
+                <td>2024</td>
+                <td>First Installation</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

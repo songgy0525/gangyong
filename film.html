@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .arrow-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+
+        .section {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 5px;
+            overflow-x: auto;
+            width: 100%;
+            padding: 10px;
+            background-color: #111;
+            border-radius: 8px;
+            scrollbar-color: #555 #111;
+            scrollbar-width: thin;
+        }
+
+        .gallery img {
+            max-width: 150px;
+            height: auto;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .overlay button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <button class="arrow-button" onclick="location.href='index2.html'">←</button>
+
+    <div class="section">
+        <h2>편향 (2023)</h2>
+        <div class="gallery" id="gallery-편향">
+            <img src="./편향/1.jpg" alt="Image 1">
+            <img src="./편향/2.jpg" alt="Image 2">
+            <img src="./편향/3.jpg" alt="Image 3">
+            <img src="./편향/4.jpg" alt="Image 4">
+            <img src="./편향/5.jpg" alt="Image 5">
+            <img src="./편향/6.jpg" alt="Image 6">
+            <img src="./편향/7.jpg" alt="Image 7">
+            <img src="./편향/8.jpg" alt="Image 8">
+            <img src="./편향/9.jpg" alt="Image 9">
+            <img src="./편향/10.jpg" alt="Image 10">
+            <img src="./편향/11.jpg" alt="Image 11">
+            <img src="./편향/12.jpg" alt="Image 12">
+            <img src="./편향/13.jpg" alt="Image 13">
+            <img src="./편향/14.jpg" alt="Image 14">
+            <img src="./편향/14(2).jpg" alt="Image 14(2)">
+            <img src="./편향/15.jpg" alt="Image 15">
+            <img src="./편향/16.jpg" alt="Image 16">
+            <img src="./편향/17.jpg" alt="Image 17">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Film</h2>
+        <div class="gallery" id="gallery-Film">
+            <img src="./Web film/1.jpeg" alt="Image 1">
+            <img src="./Web film/2.jpeg" alt="Image 2">
+            <img src="./Web film/3.jpeg" alt="Image 3">
+            <img src="./Web film/4.jpeg" alt="Image 4">
+            <img src="./Web film/5.jpeg" alt="Image 5">
+            <img src="./Web film/6.jpeg" alt="Image 6">
+            <img src="./Web film/7.jpeg" alt="Image 7">
+            <img src="./Web film/8.jpeg" alt="Image 8">
+            <img src="./Web film/9.jpeg" alt="Image 9">
+            <img src="./Web film/10.jpeg" alt="Image 10">
+            <img src="./Web film/11.jpeg" alt="Image 11">
+            <img src="./Web film/12.jpeg" alt="Image 12">
+            <img src="./Web film/13.jpeg" alt="Image 13">
+            <img src="./Web film/14.jpeg" alt="Image 14">
+            <img src="./Web film/15.jpeg" alt="Image 15">
+            <img src="./Web film/16.jpeg" alt="Image 16">
+            <img src="./Web film/17.jpeg" alt="Image 17">
+            <img src="./Web film/18.jpeg" alt="Image 18">
+            <img src="./Web film/20.jpeg" alt="Image 20">
+            <img src="./Web film/21.jpeg" alt="Image 21">
+            <img src="./Web film/22.jpeg" alt="Image 22">
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <button id="close-overlay">Close</button>
+        <img src="" alt="Enlarged Image">
+    </div>
+
+    <script>
+        const overlay = document.getElementById('overlay');
+        const overlayImage = overlay.querySelector('img');
+        const closeOverlay = document.getElementById('close-overlay');
+
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                overlay.style.display = 'flex';
+                overlayImage.src = img.src;
+            });
+        });
+
+        closeOverlay.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeOverlay) {
+                overlay.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

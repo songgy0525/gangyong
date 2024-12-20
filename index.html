@@ -3,67 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gyeongyong Song</title>
     <style>
-        html {
-            font-size: 16px;
-            font-family: Arial, Helvetica, sans-serif;
+        body {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: Arial, sans-serif;
         }
 
-        header {
-            font-size: 2rem;
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 24px; 
         }
 
-        .stamp div {
-            position: fixed;
-            font-size: 4rem;
-            text-shadow: rgb(187, 187, 187) 1px 0 30px;
-        }
-
-        .stamp div:nth-child(1) {
-            font-size: 6rem;
-            top: 25vh;
-            left: 18vw;
-        }
-
-        .stamp div:nth-child(2) {
-            font-size: 12rem;
-            top: 30vh;
-            left: 60vw;
-        }
-
-        .stamp div:nth-child(3) {
-            top: 65vh;
-            left: 8vw;
+        a:hover {
+            color: rgb(129, 255, 100);
         }
     </style>
 </head>
 <body>
-    <header>EventListener Example 01</header>
-    <div class="stamp">
-        <div>👨‍🎤</div>
-        <div>👼</div>
-        <div>🥷</div>
-    </div>
-
-    <script>
-        function addEmoji(e) {
-            const div = document.createElement("div");
-            div.innerText = "🧐";
-
-            // 클릭한 위치를 기준으로 약간 변동된 위치 설정
-            const offsetX = Math.random() * 20 - 10; // -10에서 10 사이의 랜덤 값
-            const offsetY = Math.random() * 20 - 10;
-
-            div.style.fontSize = `${Math.random() * 8 +2} rem`
-            div.style.position = "fixed";
-            div.style.top = `calc(${e.clientY}px + ${offsetY}px)`;
-            div.style.left = `calc(${e.clientX}px + ${offsetX}px)`;
-
-            document.querySelector(".stamp").appendChild(div);
-        }
-
-        window.addEventListener("click", addEmoji);
-    </script>
+    <br>
+    <br>
+    <a href="index2.html">Gyeongyong Song</a>
 </body>
 </html>

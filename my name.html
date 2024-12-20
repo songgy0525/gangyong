@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My name</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .arrow-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            color: black;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+
+        .text span {
+            font-size: 36px;
+            font-weight: bold;
+            opacity: 0; /* 기본적으로 숨김 */
+            animation: blink 6s infinite; /* 애니메이션 반복 */
+        }
+
+        /* 각 글자에 순차적으로 딜레이를 추가 */
+        .text span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .text span:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .text span:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        .text span:nth-child(4) {
+            animation-delay: 3s;
+        }
+
+        .text span:nth-child(5) {
+            animation-delay: 4s;
+        }
+
+        .text span:nth-child(6) {
+            animation-delay: 5s;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1; /* 보임 */
+            }
+            50.01%, 100% {
+                opacity: 0; /* 사라짐 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="arrow-button" onclick="location.href='index2.html'">&larr;</button>
+    <div class="text">
+        <span>송</span>
+        <span>경</span>
+        <span>용</span>
+        <span>宋</span>
+        <span>庚</span>
+        <span>龍</span>
+    </div>
+</body>
+</html>

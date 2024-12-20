@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who are you</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .arrow-button {
+            position: absolute;
+            top: 60px; /* Adjusted to move below the header */
+            left: 20px;
+            background: none;
+            color: black;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+
+        .content {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-button {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .custom-button:hover {
+            background-color: green;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <button class="arrow-button" onclick="location.href='index2.html'">←</button>
+    <header>Who are you?</header>
+    <div class="content">
+        <p>
+            2020년 계원예술대학교
+            <a class="custom-button" href="PhoA.html">사진예술과</a>
+            에 입학하였고, 2021-2023년 군 복무를 마치고 2024년도에 사진예술과 졸업과 동시에
+            <a class="custom-button" href="Intermedia Art.html">융합예술과</a>
+            에 편입하였다.
+        </p>
+        <p>
+            융합예술과에 온 뒤 사진에 국한되지 않고, 보이지 않은 이야기들을 시각화하는 작업에 흥미를 갖고 있다.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highschool</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .arrow-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            color: black;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .image {
+            max-width: 300px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .text-box {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .description {
+            font-size: 16px;
+            margin: 0;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .description a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .description a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="arrow-button" onclick="location.href='index2.html'">&larr;</button>
+    <div class="container">
+        <div class="title">Highschool Profile</div>
+        <img class="image" src="./high p/high pro.jpeg" alt="Highschool Profile">
+        <div class="text-box">
+            <p class="description">
+                이 고등학생은 체대를 가기 위해 고등학교 1학년부터 체대입시를 하게 된다. <br>
+                학업과 실기를 병행하다보니 모든가 가기 시작했고, <br>
+                기록 증진을 위해 무리하게 실기 준비를 하니 결국 무리를 당하게 되었다. <br>
+                때는 고등학교 3학년 수시 기간이었고, 결국 이 학생은 <a href="index3.html">다른 길</a>을 선호하게 되는데...
+            </p>
+        </div>
+    </div>
+</body>
+</html>

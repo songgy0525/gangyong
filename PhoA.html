@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographic Art</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 90%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 150px;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card .content {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card .content h3 {
+            margin: 0 0 5px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .card .content p {
+            margin: 0;
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        .back-button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 5px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .arrow-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            color: black;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <button class="arrow-button" onclick="location.href='index2.html'">←</button>
+    <div class="gallery">
+        <!-- Gallery Cards -->
+        <div class="card">
+            <img src="foot.jpg" alt="Image 1" loading="lazy">
+            <div class="content">
+                <h3>호리존 위 빵꾸난 양말</h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_1326.jpg" alt="Image 2" loading="lazy">
+            <div class="content">
+                <h3>대형카메라와 나</h3>
+                <p>저거 진짜 안 보임.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_2506.jpg" alt="Image 3" loading="lazy">
+            <div class="content">
+                <h3>원데이클래스</h3>
+                <p>원데이클래스 일일 조교</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_3619.jpg" alt="Image 4" loading="lazy">
+            <div class="content">
+                <h3>조명 경고문</h3>
+                <p>조명을 사용할 땐 항상 조심하세요.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_3693.jpg" alt="Image 5" loading="lazy">
+            <div class="content">
+                <h3>다이얼이 빠졌어요</h3>
+                <p>그래도 다 알아볼 수 있지롱.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_4457.jpg" alt="Image 6" loading="lazy">
+            <div class="content">
+                <h3>군대 가기 전 작업발표</h3>
+                <p>이 아이는 운전병이 되는데...</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_6574.jpg" alt="Image 7" loading="lazy">
+            <div class="content">
+                <h3>졸전 예비심사</h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_6770.jpg" alt="Image 8" loading="lazy">
+            <div class="content">
+                <h3>읏쨔읏쨔</h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_6939.jpg" alt="Image 9" loading="lazy">
+            <div class="content">
+                <h3>라이팅박스</h3>
+                <p>이거 생각보다 예쁨</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_7050.jpg" alt="Image 10" loading="lazy">
+            <div class="content">
+                <h3>졸전 액자</h3>
+                <p>액자는 하나밖에 안 했었다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_7072.jpg" alt="Image 11" loading="lazy">
+            <div class="content">
+                <h3>졸전 나무판떼기</h3>
+                <p>나무판떼기도 있었다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_7205 2.jpg" alt="Image 12" loading="lazy">
+            <div class="content">
+                <h3>졸전 디피</h3>
+                <p>액자 1 나무판떼기 1</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_8151.jpg" alt="Image 13" loading="lazy">
+            <div class="content">
+                <h3>빙하기 계원</h3>
+                <p>1-2월에 조심하세요.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_8189.jpg" alt="Image 14" loading="lazy">
+            <div class="content">
+                <h3>파홀 당근</h3>
+                <p>당근을 유용하게 사용해봐요.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_8210.jpg" alt="Image 15" loading="lazy">
+            <div class="content">
+                <h3></h3>
+                <p>사진가들은 허리와 목 건강에 신경씁시다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+
+        <img src="" alt="Full Image" id="modalImage">
+    </div>
+
+    <script>
+        // Select all gallery images
+        const images = document.querySelectorAll('.gallery img');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.getElementById('modalClose');
+
+        // Add click event to each image
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                modalImage.src = img.src; // Set modal image source
+                modal.classList.add('active'); // Show modal
+            });
+        });
+
+        // Close the modal
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

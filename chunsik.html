@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunsik</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            position: relative;
+            height: 300vh;
+            overflow-y: auto;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 14px;
+            color: gray;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            position: absolute;
+        }
+
+        /* Assign random positions */
+        img:nth-child(1) { top: 5%; left: 10%; }
+        img:nth-child(2) { top: 15%; left: 40%; }
+        img:nth-child(3) { top: 25%; left: 70%; }
+        img:nth-child(4) { top: 35%; left: 20%; }
+        img:nth-child(5) { top: 50%; left: 50%; }
+        img:nth-child(6) { top: 60%; left: 80%; }
+        img:nth-child(7) { top: 70%; left: 10%; }
+        img:nth-child(8) { top: 85%; left: 30%; }
+        img:nth-child(9) { top: 95%; left: 60%; }
+        img:nth-child(10) { top: 110%; left: 40%; }
+        img:nth-child(11) { top: 120%; left: 70%; }
+        img:nth-child(12) { top: 135%; left: 20%; }
+        img:nth-child(13) { top: 145%; left: 50%; }
+        img:nth-child(14) { top: 160%; left: 80%; }
+        img:nth-child(15) { top: 175%; left: 10%; }
+        img:nth-child(16) { top: 190%; left: 30%; }
+        img:nth-child(17) { top: 205%; left: 60%; }
+        img:nth-child(18) { top: 220%; left: 40%; }
+        img:nth-child(19) { top: 235%; left: 70%; }
+
+        .dog-icon, .paw-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        .dog-icon {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/194/194279.png');
+        }
+
+        .paw-icon {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(40px, -30px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .arrow-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: none;
+            color: black;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <button class="arrow-button" onclick="location.href='index2.html'">←</button>
+    <header>
+        <h1>My dog, Chunsik ♥</h1>
+        <p>Born in 2019</p>
+    </header>
+
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-05 001.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 002.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 003.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 004.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 005.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 006.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 007.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 008.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 009.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 010.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 011.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 012.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 013.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 014.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 015.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 016.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 017.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 018.jpeg">
+    <img src="KakaoTalk_Photo_2024-12-19-23-50-06 019.jpeg">
+
+    <div class="dog-icon" style="top: 20%; left: 15%;"></div>
+    <div class="dog-icon" style="top: 40%; left: 50%;"></div>
+    <div class="dog-icon" style="top: 60%; left: 70%;"></div>
+    <div class="dog-icon" style="top: 80%; left: 30%;"></div>
+    <div class="dog-icon" style="top: 90%; left: 10%;"></div>
+    <div class="dog-icon" style="top: 110%; left: 40%;"></div>
+    <div class="dog-icon" style="top: 130%; left: 60%;"></div>
+    <div class="dog-icon" style="top: 150%; left: 20%;"></div>
+
+    <div class="paw-icon" style="top: 10%; left: 40%;"></div>
+    <div class="paw-icon" style="top: 30%; left: 60%;"></div>
+    <div class="paw-icon" style="top: 50%; left: 80%;"></div>
+    <div class="paw-icon" style="top: 70%; left: 20%;"></div>
+    <div class="paw-icon" style="top: 85%; left: 40%;"></div>
+    <div class="paw-icon" style="top: 120%; left: 10%;"></div>
+    <div class="paw-icon" style="top: 140%; left: 70%;"></div>
+    <div class="paw-icon" style="top: 180%; left: 30%;"></div>
+</body>
+</html>

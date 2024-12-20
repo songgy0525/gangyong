@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #5d5d5d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            border: 6px solid #dcddb0;
+            box-sizing: border-box;
+        }
+
+        .poster-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .poster-container img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .arrow-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <button class="arrow-button" onclick="location.href='index2.html'">←</button>
+    <div class="poster-container">
+        <img src="./poster/photo.jpg" alt="Exhibition Poster 1">
+        <img src="./poster/mo.jpg" alt="Exhibition Poster 2">
+        <img src="./poster/inter.jpg" alt="Exhibition Poster 3">
+    </div>
+</body>
+</html>

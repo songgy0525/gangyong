@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermedia Art</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            position: relative;
+            height: 200vh;
+        }
+
+        .arrow-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: none;
+            color: black;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container img {
+            width: auto;
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            position: absolute;
+        }
+
+        /* 이미지 위치 다양하게 배치 */
+        .container img:nth-child(1) { top: 5%; left: 5%; }
+        .container img:nth-child(2) { top: 10%; left: 30%; }
+        .container img:nth-child(3) { top: 15%; left: 55%; }
+        .container img:nth-child(4) { top: 20%; left: 80%; }
+        .container img:nth-child(5) { top: 25%; left: 10%; }
+        .container img:nth-child(6) { top: 30%; left: 35%; }
+        .container img:nth-child(7) { top: 35%; left: 60%; }
+        .container img:nth-child(8) { top: 40%; left: 85%; }
+        .container img:nth-child(9) { top: 45%; left: 15%; }
+        .container img:nth-child(10) { top: 50%; left: 40%; }
+        .container img:nth-child(11) { top: 55%; left: 65%; }
+        .container img:nth-child(12) { top: 60%; left: 5%; }
+        .container img:nth-child(13) { top: 65%; left: 30%; }
+        .container img:nth-child(14) { top: 70%; left: 55%; }
+        .container img:nth-child(15) { top: 75%; left: 80%; }
+        .container img:nth-child(16) { top: 80%; left: 10%; }
+        .container img:nth-child(17) { top: 85%; left: 35%; }
+        .container img:nth-child(18) { top: 90%; left: 60%; }
+        .container img:nth-child(19) { top: 95%; left: 85%; }
+        .container img:nth-child(20) { top: 100%; left: 20%; }
+        .container img:nth-child(21) { top: 105%; left: 45%; }
+        .container img:nth-child(22) { top: 110%; left: 70%; }
+        .container img:nth-child(23) { top: 115%; left: 10%; }
+        .container img:nth-child(24) { top: 120%; left: 35%; }
+        .container img:nth-child(25) { top: 125%; left: 60%; }
+        .container img:nth-child(26) { top: 130%; left: 85%; }
+        .container img:nth-child(27) { top: 135%; left: 15%; }
+        .container img:nth-child(28) { top: 140%; left: 40%; }
+        .container img:nth-child(29) { top: 145%; left: 65%; }
+        .container img:nth-child(30) { top: 150%; left: 5%; }
+
+        .line {
+            position: absolute;
+            width: 2px;
+            background-color: black;
+            transform-origin: top;
+        }
+
+        /* 다양한 선 추가 */
+        .line-1 { top: 7%; left: 7%; height: 150px; transform: rotate(30deg); }
+        .line-2 { top: 12%; left: 32%; height: 200px; transform: rotate(-20deg); }
+        .line-3 { top: 17%; left: 57%; height: 250px; transform: rotate(40deg); }
+        .line-4 { top: 22%; left: 82%; height: 150px; transform: rotate(-30deg); }
+        .line-5 { top: 27%; left: 12%; height: 200px; transform: rotate(25deg); }
+        .line-6 { top: 32%; left: 37%; height: 300px; transform: rotate(-15deg); }
+        .line-7 { top: 37%; left: 62%; height: 250px; transform: rotate(35deg); }
+        .line-8 { top: 42%; left: 87%; height: 150px; transform: rotate(-25deg); }
+        .line-9 { top: 47%; left: 17%; height: 200px; transform: rotate(20deg); }
+        .line-10 { top: 52%; left: 42%; height: 250px; transform: rotate(-10deg); }
+    </style>
+</head>
+<body>
+    <button class="arrow-button" onclick="location.href='index2.html'">&larr;</button>
+
+    <div class="container">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+        <div class="line line-4"></div>
+        <div class="line line-5"></div>
+        <div class="line line-6"></div>
+        <div class="line line-7"></div>
+        <div class="line line-8"></div>
+        <div class="line line-9"></div>
+        <div class="line line-10"></div>
+
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-00 001.jpeg" alt="Image 001">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-00 002.jpeg" alt="Image 002">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-00 003.jpeg" alt="Image 003">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-00 004.png" alt="Image 004">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-00 005.jpeg" alt="Image 005">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-00 006.jpeg" alt="Image 006">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-01 007.jpeg" alt="Image 007">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-01 008.jpeg" alt="Image 008">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-01 009.jpeg" alt="Image 009">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-01 010.jpeg" alt="Image 010">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-01 011.jpeg" alt="Image 011">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-02 012.jpeg" alt="Image 012">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-02 013.jpeg" alt="Image 013">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-02 014.jpeg" alt="Image 014">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-02 015.jpeg" alt="Image 015">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-02 016.jpeg" alt="Image 016">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-03 017.jpeg" alt="Image 017">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-03 018.jpeg" alt="Image 018">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-03 019.jpeg" alt="Image 019">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-03 019.jpeg" alt="Image 019">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-03 020.jpeg" alt="Image 020">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-03 021.jpeg" alt="Image 021">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-04 022.jpeg" alt="Image 022">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-04 023.jpeg" alt="Image 023">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-04 024.jpeg" alt="Image 024">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-04 025.jpeg" alt="Image 025">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-04 026.jpeg" alt="Image 026">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-04 027.jpeg" alt="Image 027">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-04 028.jpeg" alt="Image 028">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-05 029.jpeg" alt="Image 029">
+        <img src="KakaoTalk_Photo_2024-12-20-01-44-05 030.jpeg" alt="Image 030">
+    </div>
+</body>
+</html>
